@@ -75,7 +75,7 @@ namespace UrlShortner.API
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("../swagger/swagger.json", "Url Shortner API");
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "Url Shortner API");
                 c.RoutePrefix = "docs";
             });
 
