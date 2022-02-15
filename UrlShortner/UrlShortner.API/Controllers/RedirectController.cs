@@ -36,7 +36,7 @@ namespace PaoloCattaneo.UrlShortner.API.Controllers
         /// </remarks>
         /// <param name="key">Key of the URL destination</param>
         /// <response code="302">Redirect to the decoded URL</response>
-        /// <response code="404">Key was not found</response>
+        /// <response code="204">Key was not found</response>
         /// <response code="410">Key was found but expired</response>
         /// <response code="500">An error occured during the operation</response>
         [HttpGet("{key}")]
@@ -49,7 +49,7 @@ namespace PaoloCattaneo.UrlShortner.API.Controllers
 
                 if(shortUrl == null)
                 {
-                    return NotFound();
+                    return StatusCode(StatusCodes.Status204NoContent);
                 }
 
                 if(shortUrl.ExpirationTime < DateTime.UtcNow)

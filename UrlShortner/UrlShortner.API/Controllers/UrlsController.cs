@@ -45,7 +45,7 @@ namespace PaoloCattaneo.UrlShortner.API.Controllers
         /// </remarks>
         /// <param name="key">Key of the URL</param>
         /// <response code="200">Returns the requested URL shortened object</response>
-        /// <response code="404">URL with the given key was not found</response>
+        /// <response code="204">URL with the given key was not found</response>
         /// <response code="500">An error occured during the operation</response>
         [HttpGet("{key}")]
         [ProducesResponseType(typeof(UrlShort), 200)]
@@ -62,7 +62,7 @@ namespace PaoloCattaneo.UrlShortner.API.Controllers
                 }
                 else
                 {
-                    return NotFound();
+                    return StatusCode(StatusCodes.Status204NoContent);
                 }
                 
             }
