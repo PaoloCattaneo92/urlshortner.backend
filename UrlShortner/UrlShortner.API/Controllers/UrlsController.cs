@@ -32,14 +32,16 @@ namespace PaoloCattaneo.UrlShortner.API.Controllers
         /// <remarks>
         /// Sample request:
         ///
-        ///     GET /api/urls/B
+        ///     GET /api/urls/BR
         ///     
         /// Sample response:
         /// 
         ///     {
-        ///         "id": 2,
-        ///         "key": "B",
-        ///         "url": "https://www.google.com/"
+        ///         "id": 52,
+        ///         "key": "BR",
+        ///         "url": "https://www.youtube.com/watch?v=tCs48OFv7xA",
+        ///         "creationTime": "2022-02-15T14:08:21
+        ///         "expirationTime": "2022-08-14T14:08:21"
         ///     }
         /// 
         /// </remarks>
@@ -78,14 +80,16 @@ namespace PaoloCattaneo.UrlShortner.API.Controllers
         /// <remarks>
         /// Sample request:
         ///
-        ///     POST /api/urls?url=https://www.google.com/
+        ///     POST /api/urls?url=https://www.youtube.com/watch?v=tCs48OFv7xA
         ///     
         /// Sample response:
         /// 
         ///     {
-        ///         "id": 2,
-        ///         "key": "B",
-        ///         "url": "https://www.google.com/"
+        ///         "id": 52,
+        ///         "key": "BR",
+        ///         "url": "https://www.youtube.com/watch?v=tCs48OFv7xA",
+        ///         "creationTime": "2022-02-15T14:08:21
+        ///         "expirationTime": "2022-08-14T14:08:21"
         ///     }
         /// 
         /// </remarks>
